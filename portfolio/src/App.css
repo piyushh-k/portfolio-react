@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container.light {
+  background-color: #fff1e6;
+  color: #222;
+}
+
+
+.app-container.dark {
+  background-color: #222222;
+  color: white;
+}

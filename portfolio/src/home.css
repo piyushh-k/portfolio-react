@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  padding: 0 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home h3 {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.home p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.home h1:hover {
+  transform: scale(1.02);
+}
+
+.separator {
+  margin: 2rem auto;
+  width: 40%;
+  height: 2px;
+  background: rgb(251, 202, 138);
+  border: none;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: transparent; 
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; 
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links i {
+  font-size: 2rem;
+}
+
+
+
+.app-container.light .home {
+  background: linear-gradient(135deg, #fff1e6, #ffe5b4); 
+  color: #333;
+}
+
+.app-container.light .social-links a {
+  color: #f97316;
+}
+.app-container.light .social-links a:hover {
+  color: #000;
+}
+
+.app-container.light .home h1 {
+  color: #ff6a00;
+}
+
+.app-container.dark .home {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a); 
+  color: #eee;
+}
+
+.app-container.dark .social-links a {
+  color: #ffb266;
+}
+.app-container.dark .social-links a:hover {
+  color: #fff;
+}
+
+.app-container.dark .home h1 {
+  color: #ffcc99;
+}
+
+.app-container.dark .home h3,
+.app-container.dark .home p {
+  color: #ddd;
+}

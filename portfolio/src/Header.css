@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 108, 0, 0.85), rgba(255, 166, 77, 0.85));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+nav li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
+  background: #fff;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+nav li a:hover {
+  color: #ffe9d6;
+  transform: translateY(-2px);
+}
+
+
+.header.dark {
+  background: linear-gradient(135deg, #1c1c1c, #333333);
+  color: #ffffff;
+}
+
+.header.light {
+  background: linear-gradient(135deg, rgba(255, 108, 0, 0.85), rgba(255, 166, 77, 0.85));
+  color: #000000;
+}
+
+.header.dark nav li a {
+  color: #e0e0e0;
+}
+
+.header.dark nav li a:hover {
+  color: #ffcc99;
+}
+
+.header.light nav li a {
+  color: #ffffff;
+}
+
+.header.light nav li a:hover {
+  color: #ffe9d6;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.2);
+}
+
