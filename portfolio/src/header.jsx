@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import './Header.css';
+import './Css/Header.css';
 import { themeContext } from './theme';
 
 function Header() {
@@ -12,15 +12,16 @@ function Header() {
 
     return (
         <header className={`header ${mode === 'dark' ? 'dark' : 'light'}`}>
-            
+
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/skills">Skills</Link></li>
+                    <li><Link to="/form">form</Link></li>
                     <button onClick={handleToggle} className="theme-toggle-btn">
-                <i className="fas fa-moon"></i>
-                </button>
+                        <i className="fas fa-moon"></i>
+                    </button>
                 </ul>
             </nav>
         </header>

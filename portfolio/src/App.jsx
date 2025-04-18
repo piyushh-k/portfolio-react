@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { useState } from "react";
 import Home from './Home';
+import Contact from './form';
 import About from './About';
 import Header from './header';
 import Skills from './Skills';
-import './App.css';
+import './Css/App.css';
 import { themeContext } from './theme';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="form" element={<Contact />}/>
         </Routes>
       </div>
     </themeContext.Provider>

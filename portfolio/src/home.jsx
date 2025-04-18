@@ -1,4 +1,4 @@
-import './home.css'
+import './Css/home.css'
 
 function Home() {
     return (
@@ -15,6 +15,9 @@ function Home() {
                     </a>
                     <a href="https://github.com/piyushh-k" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/PiyushKoch7896" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-twitter"></i>
                     </a>
                 </div>
             </section>
