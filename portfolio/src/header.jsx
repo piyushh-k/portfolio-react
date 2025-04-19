@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import './Css/Header.css';
-import { themeContext } from './theme';
+import { themeContext } from './Context/theme';
 
 function Header() {
     const { mode, setMode } = useContext(themeContext);

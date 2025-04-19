@@ -6,7 +6,7 @@ import About from './About';
 import Header from './header';
 import Skills from './Skills';
 import './Css/App.css';
-import { themeContext } from './theme';
+import { themeContext } from './Context/theme';
 
 function App() {
   const [mode, setMode] = useState('light');
