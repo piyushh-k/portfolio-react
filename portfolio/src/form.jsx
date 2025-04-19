@@ -1,8 +1,13 @@
 import { useEffect } from "react";
 import "./Css/form.css";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import {ToastContext} from './Context/ToastContext';
 
 function Contact() {
+
+  const {showToast} = useContext(ToastContext);
+
   useEffect(() => {
     document.body.style.backgroundColor = "#212121";
     return () => {
@@ -29,13 +34,16 @@ function Contact() {
 
         if (response.ok) {
           console.log("Form successfully submitted!");
+          showToast('Your form was sent!', 'success');
           resolve();
         } else {
           console.error("Form submission failed.");
+          showToast('Failed to send form. Please try again.', 'error');
           reject();
         }
       } catch (error) {
         console.error("Error submitting form:", error);
+        showToast('An error occurred. Please try again.', 'error');
         reject(error);
       }
     });
