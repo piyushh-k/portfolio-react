@@ -94,3 +94,15 @@ nav li a:hover {
   transform: scale(1.2);
 }
 
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ffce45;
+  border-bottom: 2px solid #ffce45;
+}

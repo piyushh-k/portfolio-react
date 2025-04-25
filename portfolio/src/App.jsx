@@ -8,8 +8,8 @@ import Skills from "./Skills";
 import "./Css/App.css";
 import { themeContext } from "./Context/theme";
 import { ToastContext } from "./Context/ToastContext";
-import './Css/toast.css';
-import Toast from "./toast.jsx"
+import "./Css/toast.css";
+import Toast from "./toast.jsx";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -24,14 +24,13 @@ function App() {
     setToast({ message, type, isVisible: true });
 
     setTimeout(() => {
-      setToast(prevToast => ({ ...prevToast, isVisible: false }));
-    }, 5000);
-    
+      setToast((prevToast) => ({ ...prevToast, isVisible: false }));
+    }, 10000);
   };
 
   return (
-    <themeContext.Provider value={{ mode, setMode }}>
-      <ToastContext.Provider value={{toast , showToast}}>
+    <ToastContext.Provider value={{ toast, showToast }}>
+      <themeContext.Provider value={{ mode, setMode }}>
         <div className={`app-container ${mode}`}>
           <Header />
           <Toast />
@@ -42,8 +41,8 @@ function App() {
             <Route path="/form" element={<Contact />} />
           </Routes>
         </div>
-      </ToastContext.Provider>
-    </themeContext.Provider>
+      </themeContext.Provider>
+    </ToastContext.Provider>
   );
 }
 
