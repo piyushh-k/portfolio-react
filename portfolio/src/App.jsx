@@ -25,12 +25,12 @@ function App() {
 
     setTimeout(() => {
       setToast((prevToast) => ({ ...prevToast, isVisible: false }));
-    }, 10000);
+    }, 5000);
   };
 
   return (
-    <ToastContext.Provider value={{ toast, showToast }}>
-      <themeContext.Provider value={{ mode, setMode }}>
+    <themeContext.Provider value={{ mode, setMode }}>
+      <ToastContext.Provider value={{ toast, showToast }}>
         <div className={`app-container ${mode}`}>
           <Header />
           <Toast />
@@ -41,8 +41,8 @@ function App() {
             <Route path="/form" element={<Contact />} />
           </Routes>
         </div>
-      </themeContext.Provider>
-    </ToastContext.Provider>
+      </ToastContext.Provider>
+    </themeContext.Provider>
   );
 }
 

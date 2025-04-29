@@ -33,18 +33,6 @@ nav li a {
   transition: all 0.3s ease;
 }
 
-nav li a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 3px;
-  left: 0;
-  bottom: -6px;
-  background: #fff;
-  transition: width 0.3s ease;
-  border-radius: 4px;
-}
-
 nav li a:hover::after {
   width: 100%;
 }
